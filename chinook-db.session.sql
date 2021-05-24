@@ -15,3 +15,7 @@ SELECT
 FROM Customer
 JOIN Invoice
 WHERE Country IS "Brazil"
+
+SELECT *
+FROM Employee
+WHERE Title IS "Sales Support Agent"
