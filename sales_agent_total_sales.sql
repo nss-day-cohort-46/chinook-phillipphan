@@ -1,5 +1,5 @@
 SELECT
-    COUNT(i.InvoiceId) AS TotalSales,
+    SUM(i.Total) AS TotalSales,
     e.*
 FROM Invoice AS i
 JOIN Customer AS c ON c.CustomerId = i.CustomerId
