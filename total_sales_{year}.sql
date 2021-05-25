@@ -1,9 +1,6 @@
 SELECT 
-    SUM(Total)
+    SUM(Total) AS "Sales",
+    STRFTIME("%Y", InvoiceDate) AS "Year"
 FROM Invoice
-WHERE strftime ("%Y", InvoiceDate) = "2009"
-
-SELECT 
-    SUM(Total)
-FROM Invoice
-WHERE strftime ("%Y", InvoiceDate) = "2011"
+WHERE InvoiceDate LIKE "%2009%" OR InvoiceDate LIKE "%2011%"
+GROUP BY "Year"

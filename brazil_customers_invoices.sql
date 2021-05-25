@@ -6,4 +6,4 @@ SELECT
     BillingCountry
 FROM Customer
 JOIN Invoice
-WHERE Country IS "Brazil"
+WHERE BillingCountry IS "Brazil"
